@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <WorkingDirectory>../../</WorkingDirectory>
+  </PropertyGroup>
+
+  <Target Name="husky" BeforeTargets="Restore;CollectPackageReferences">
+    <Exec Command="dotnet tool restore"  StandardOutputImportance="Low" StandardErrorImportance="High"
+        WorkingDirectory="$(WorkingDirectory)" />
+    <Exec Command="dotnet husky install" StandardOutputImportance="Low" StandardErrorImportance="High"
+        WorkingDirectory="$(WorkingDirectory)" />  <!--Update this to the relative path to your project root dir -->
+  </Target>
+</Project>
