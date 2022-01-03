@@ -67,7 +67,7 @@
           "description": "List of targets to be skipped. Empty list skips all dependencies",
           "items": {
             "type": "string",
-            "enum": ["Clean", "Compile", "Restore"]
+            "enum": ["Clean", "Compile", "Restore", "Test"]
           }
         },
         "Solution": {
@@ -79,7 +79,7 @@
           "description": "List of targets to be invoked. Default is '{default_target}'",
           "items": {
             "type": "string",
-            "enum": ["Clean", "Compile", "Restore"]
+            "enum": ["Clean", "Compile", "Restore", "Test"]
           }
         },
         "Verbosity": {

@@ -37,6 +37,17 @@
         "**/*.css",
         "**/*.scss"
       ]
+    },
+    {
+      "name": "Test",
+      "group": "pre-commit",
+      "output": "always",
+      "command": "bash",
+      "args": ["build.sh", "--target", "Test"],
+      "windows": {
+        "command": "pwsh",
+        "args": ["build.ps1", "--Target", "Test"]
+      }
     }
   ]
 }
