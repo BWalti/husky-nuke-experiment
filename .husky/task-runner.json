@@ -45,8 +45,8 @@
       "command": "bash",
       "args": ["build.sh", "--target", "Test"],
       "windows": {
-        "command": "cmd",
-        "args": ["build.cmd", "--Target", "Test"]
+        "command": "pwsh",
+        "args": ["build.ps1", "--Target", "Test"]
       }
     }
   ]
